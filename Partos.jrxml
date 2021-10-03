@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Partos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="efbb2c9f-bb5b-460e-9865-16fd37222827">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Nº Vaca" class="java.lang.String"/>
+	<field name="Data Inseminação" class="java.lang.String"/>
+	<field name="Data Parto aprox." class="java.lang.String"/>
+	<field name="Propriedade" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="10" width="100" height="30" uuid="79ca15ad-a18c-47c8-a635-ed57a346aa98"/>
+				<text><![CDATA[Partos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="cb7277d3-cf74-4e9f-971c-3fc431416da5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3471094-4ba0-410e-8d1b-d8fe5136af09"/>
+				</reportElement>
+				<text><![CDATA[Nº Vaca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="100" height="30" uuid="2ffebba6-417d-497a-a14a-d589c7b00efd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be89390f-eceb-49e6-99d6-9e2a7505bbbe"/>
+				</reportElement>
+				<text><![CDATA[Data Inseminação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="30" uuid="54e1d048-6209-4ca4-b481-98339223ec32">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cfda8ff9-a450-416b-94bd-017aa5848c2e"/>
+				</reportElement>
+				<text><![CDATA[Data Parto aprox.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="30" uuid="bbfa3582-5327-42e8-9714-d314b0315bae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a911c49-3070-40ed-8aad-fc2e564ecbd4"/>
+				</reportElement>
+				<text><![CDATA[Propriedade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="ebb281e1-8e5a-4b92-9d64-64e54a599e3d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3471094-4ba0-410e-8d1b-d8fe5136af09"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Nº Vaca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="0" width="100" height="30" uuid="72dbcf7d-1b7c-4362-82be-a5c3a8c09fd5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be89390f-eceb-49e6-99d6-9e2a7505bbbe"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Data Inseminação}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="100" height="30" uuid="63c7ca24-3c42-4cd7-bc52-4bda78b593d1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cfda8ff9-a450-416b-94bd-017aa5848c2e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Data Parto aprox.}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="100" height="30" uuid="d860e732-cdd4-41ff-887e-1dee27abfa9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a911c49-3070-40ed-8aad-fc2e564ecbd4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Propriedade}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="230" y="7" width="100" height="30" uuid="a8e9fabd-fa02-43a3-b1db-abefdd51d01b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="10" width="100" height="30" uuid="f0ff3911-aa80-4685-a38f-254733a4de80"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
