@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5b53a4a9-7093-4393-bbcb-d5573e02d56d">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="479"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="521"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="bancopecuaria"/>
+	<parameter name="Parameter" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT inseminacoes.`idInseminacoes`,
+	inseminacoes.animais_idanimal,
+	inseminacoes.tentativa,
+	inseminacoes.ano,
+	inseminacoes.touro,
+	inseminacoes.data_inseminacao,
+	inseminacoes.data_diagnostico,
+	inseminacoes.diagnostico,
+	animais.propriedade
+FROM inseminacoes
+INNER JOIN animais ON
+inseminacoes.animais_idanimal = animais.idanimal
+WHERE 
+	 $X{EQUAL,inseminacoes.ano,Parameter} AND inseminacoes.diagnostico LIKE '%PRENHA%'
+	 ORDER BY animais.propriedade, inseminacoes.data_inseminacao ASC]]>
+	</queryString>
+	<field name="ID" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="idInseminacoes"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="ID"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="1"/>
+	</field>
+	<field name="VACA" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="animais_idanimal"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="Vaca"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="2"/>
+	</field>
+	<field name="Tentativa" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="tentativa"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="Nº tentativa"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="3"/>
+	</field>
+	<field name="Ano" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="Ano"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="Ano"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="4"/>
+	</field>
+	<field name="Touro" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="Touro"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="Touro"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="5"/>
+	</field>
+	<field name="Data inseminação" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="data_inseminacao"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="D Inseminação"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="6"/>
+	</field>
+	<field name="Diagnóstico" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.name" value="diagnostico"/>
+		<property name="net.sf.jasperreports.sql.field.column.label" value="Diagnóstico"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="7"/>
+	</field>
+	<field name="PROPRIEDADE" class="java.lang.String">
+		<property name="net.sf.jasperreports.sql.field.column.label" value="propriedade"/>
+		<property name="net.sf.jasperreports.sql.field.column.index" value="8"/>
+		<property name="net.sf.jasperreports.sql.field.column.name" value="propriedade"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Immediate">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="31" uuid="f14ae4aa-3073-49fb-8fe2-45af7ca57040">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a72eb118-7de9-4ef9-aa01-d79e606ba398"/>
+				</reportElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="0" width="70" height="31" uuid="e4d501b9-1b22-4e33-92c3-a60510f7043e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="13fbfa27-c657-4dca-bb09-23d4b0d57535"/>
+				</reportElement>
+				<text><![CDATA[VACA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="0" width="70" height="31" uuid="b466002d-246c-49cb-98b2-0bb60d805d1d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e162d914-5e85-4e44-a10f-806bd572aa34"/>
+				</reportElement>
+				<text><![CDATA[Tentativa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="69" height="31" uuid="2252c6e5-bc3d-47c9-a8e4-6ea7cebafb8c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2fc5800b-0e10-45b0-8a1e-6f68a6be1d2c"/>
+				</reportElement>
+				<text><![CDATA[Ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="69" height="31" uuid="9ae34e69-f59d-4846-a3db-17044afeb7e5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ac9e6f8-af52-4d04-b6e4-ef48dcfe12ca"/>
+				</reportElement>
+				<text><![CDATA[Touro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="0" width="69" height="31" uuid="fe9ee067-b57a-4d96-b535-456411c87aa5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="230ab019-ec30-427e-b02e-32118449df0e"/>
+				</reportElement>
+				<text><![CDATA[Data inseminação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="69" height="31" uuid="4d5c44e4-e14c-43b7-9d3b-244ba4e03305">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e34ed44d-1ef6-4dd0-9b64-806373f9d515"/>
+				</reportElement>
+				<text><![CDATA[Diagnóstico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="0" width="69" height="31" uuid="94718daa-dc87-4ef4-ad50-96c6fb1a8e82">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a971295-c355-4f40-ae21-67c804d3727a"/>
+				</reportElement>
+				<text><![CDATA[PROPRIEDADE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+			<textField>
+				<reportElement x="0" y="0" width="70" height="52" uuid="052bc678-970b-413e-b8cf-a66ae87e31c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a72eb118-7de9-4ef9-aa01-d79e606ba398"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="70" height="52" uuid="e6ad1405-c178-41b9-9925-9131f28e62a8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="13fbfa27-c657-4dca-bb09-23d4b0d57535"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{VACA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="70" height="52" uuid="6a532167-2b12-48ef-ad30-e32112a33064">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e162d914-5e85-4e44-a10f-806bd572aa34"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Tentativa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="69" height="52" uuid="fa2fa527-d611-4cf5-99d7-fbe8550c8b3e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2fc5800b-0e10-45b0-8a1e-6f68a6be1d2c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Ano}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="69" height="52" uuid="49de49d6-fbbd-470f-b016-99437724cf92">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ac9e6f8-af52-4d04-b6e4-ef48dcfe12ca"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Touro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="69" height="52" uuid="d278abe8-ba76-4581-8960-d8a32d768b14">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="230ab019-ec30-427e-b02e-32118449df0e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Data inseminação}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="69" height="52" uuid="60781e5f-33c3-4942-abf8-7d07dbd37ce5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e34ed44d-1ef6-4dd0-9b64-806373f9d515"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Diagnóstico}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="0" width="69" height="52" uuid="e9cf3538-b748-441a-9836-4f6a9f43ac94">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a971295-c355-4f40-ae21-67c804d3727a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{PROPRIEDADE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
