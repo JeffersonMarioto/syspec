@@ -1,0 +1,169 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Syspec - Sistema para Pecuária</title>
+    <link rel="canonical" href="https://html5-templates.com/demo/amp/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<script type="application/ld+json">
+	{
+	"@context": "http://schema.org",
+	"@type": "Webpage",
+	"url": "https://html5-templates.com",
+	"name": "HTML5 Templates",
+	"headline": "Simple AMP HTML5 Template",
+	"description": "A simple AMP HTML5 template with sidebar, social share icons and some demo text.",
+	"author": "html5author",
+	"mainEntityOfPage": {
+	  "@type": "WebPage",
+	  "@id": "https://html5-templates.com"
+	},
+	"publisher": {
+	  "@type": "Organization",
+	  "name": "HTML5 Templates",
+	  "logo": {
+		  "url": "https://html5-templates.com/images/google-amp.jpg",
+		  "width": 300,
+		  "height": 200,
+		  "@type": "ImageObject"
+	  }
+	},
+	"image": {
+	  "@type": "ImageObject",
+	  "url": "https://html5-templates.com/images/og.jpg",
+	  "width": 1000,
+	  "height": 458
+	}
+	}
+	</script>
+		<style type="text/css">
+	<!--
+		body {
+			padding:0px;
+			margin:0px;
+		}
+ 
+		#menu ul {
+			padding:0px;
+			margin:0px;
+			float: left;
+			width: 100%;
+			background-color:#EDEDED;
+			list-style:none;
+			font:80% Tahoma;
+		}
+ 
+		#menu ul li { display: inline; }
+ 
+		#menu ul li a {
+			background-color:#EDEDED;
+			color: #333;
+			text-decoration: none;
+			border-bottom:3px solid #EDEDED;
+			padding: 2px 10px;
+			float:left;
+		}
+ 
+		#menu ul li a:hover {
+			background-color:#D6D6D6;
+			color: #6D6D6D;
+			border-bottom:3px solid #EA0000;
+		}
+	-->
+	</style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+	<style amp-custom>
+body{background-color: #FFFFFF;font-family: Arial, Helvetica, sans-serif;padding: 40px 0 50px;}
+#socialFooter{position:fixed;background: #DDD;bottom: 0;left:0;right:0;padding: 5px 10px 0;text-align:center;z-index:1000;height: 35px;}
+.wrapFB {vertical-align: middle;padding: 4px 9px 0 4px;float: right;}
+#pageWrap {max-width: 500px;margin: auto;padding: 20px;}
+.hamburger {padding: 5px 10px 5px 20px;display: inline-block;font-size: 25px;cursor: pointer;}
+.site-name {display: inline-block;vertical-align: top;font-size: 20px;font-weight: bold;line-height: 45px;}
+.sidebar {padding: 10px;margin: 0;color: #FFF;font-weight:bold;}
+#sidebar1{background: #CE5937;}
+.sidebar > li {list-style: none;margin-bottom:10px;}
+.sidebar a {text-decoration: none;color: #FFF;}
+.close-sidebar {font-size: 1.5em;padding: 5px 15px;cursor: pointer;color: #FFFFFF;}
+.headerbar {background: #CE5937;color: #FFF;line-height: 30px;position: fixed;top: 0;left: 0;right: 0;height: 40px;z-index: 1000;}
+.headerbar a {text-decoration: none;color: #FFF;}
+	</style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-facebook-like" src="https://cdn.ampproject.org/v0/amp-facebook-like-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  </head>
+  <body>
+    <header class="headerbar">
+      <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+      <a href="index.html">Consultas</a>
+    </header>
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+      <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+      <ul class="sidebar">
+        <li><a href="cadastro_animais.html">Cadastro de animais</a></li>
+        <li><a href="pesagem.html">Pesagens</a></li>
+        <li><a href="inseminacoes.html">Inseminações</a></li>
+        <li><a href="sanitario.html">Sanitário</a></li>
+        <li><a href="medicacoes.html">Medicações</a></li>
+        <li><a href="minerais_racoes.html">Minerais & Rações</a></li>
+        <li><a href="consultas.html">Consultas</a></li>
+        <li><a href="ajuda.html">Ajuda</a></li>
+      </ul>
+    </amp-sidebar>
+	<style>
+		body {
+		  font-family: "Lato", sans-serif;
+		}
+
+		.sidenav {
+		  width: 250px;
+		  position: fixed;
+		  z-index: 1;
+		  top: 40px;
+		  left: 10px;
+		  background: #eee;
+		  overflow-x: hidden;
+		  padding: 8px 0;
+		}
+
+		.sidenav a {
+		  padding: 6px 8px 6px 16px;
+		  text-decoration: none;
+		  font-size: 25px;
+		  color: #2196F3;
+		  display: block;
+		}
+
+		.sidenav a:hover {
+		  color: #064579;
+		}
+
+		.main {
+		  margin-left: 140px; /* Same width as the sidebar + left position in px */
+		  font-size: 28px; /* Increased text to enable scrolling */
+		  padding: 0px 20px;
+		}
+
+		@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 30px;}
+		  .sidenav a {font-size: 18px;}
+		}
+		
+	</style>
+
+	<div class="sidenav">
+	  <a href="consulta_animal.html">Animais</a>
+	  <a href="consulta_animais_propriedade.html">Animais por propriedade</a>
+	  <a href="consulta_pesagem.html">Pesagem</a>
+	  <a href="consulta_inseminacoes.html">Inseminações</a>
+	  <a href="consulta_partos.html">Previsão Partos</a>
+	  <a href="consulta_sanitarios.html">Sanitários</a>
+	  <a href="consulta_medicamentos.html">Medicações</a>
+	  <a href="consulta_minerais.html">Minerais & Rações</a>
+	</div>
+	<div class="main">
+  </body>
+  
+</html>
